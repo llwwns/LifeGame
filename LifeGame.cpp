@@ -43,7 +43,7 @@ std::string LifeGame::GetOutput() const
     std::ostringstream out;
     for (int i = 1; i <= height; i++) {
         for (int j = 1; j <= width; j++) {
-            out << static_cast<int>(data_now[GetIndex(i, j)]);
+            out << (data_now[GetIndex(i, j)] == 1 ? 'X' : ' ');
         }
         out << std::endl;
     }
